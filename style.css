@@ -1,0 +1,245 @@
+:root {
+    --primary-dark: #12110f; /* Preto */
+    --accent-gold: #c9a403; /* Dourado mais escuro para contraste */
+    --emergency-red: #b91c1c; /* Vermelho mais escuro */
+    --bg-gray: #d4d0c8; /* Cinza mais claro */
+    --bg-light: #f5f5dc; /* Bege bem claro */
+    --text-dark: #12110f; /* Preto para texto */
+    --text-muted: #3a3a3a; /* Cinza escuro com bom contraste */
+    --border-gold: #a88b00; /* Dourado escuro para bordas */
+    --font-scale: 1;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: calc(16px * var(--font-scale)); scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--text-dark); background: #fff; line-height: 1.5; overflow-x: hidden; width: 100%; }
+.body-gray { background: var(--bg-light); }
+
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* ACESSIBILIDADE */
+.skip-link { position: absolute; top: -100px; left: 0; background: var(--primary-dark); color: #fff; padding: 1rem; z-index: 1000; }
+.skip-link:focus { top: 0; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* HEADER */
+header { 
+    background: linear-gradient(135deg, #f7db08 0%, #f7db08 50%, var(--primary-dark) 50%, var(--primary-dark) 100%);
+    color: #000; 
+    padding: 2rem 0; 
+    width: 100%; 
+    height: auto !important; 
+}
+.header-row { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
+.header-left { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+.header-title { text-align: center; max-width: 550px; }
+.header-subtitle { opacity: 1; color: #000; }
+.logo-policia { display: block; margin: 0 auto 1rem; width: 85px; height: auto; }
+header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens: none !important; color: #000; }
+
+.header-nav-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+.font-ctrl-row { display: flex; justify-content: center; margin-top: 1.5rem; width: 100%; }
+.font-ctrl { background: #fff; color: #000; padding: 10px 15px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.font-ctrl-group { display: flex; align-items: center; gap: 15px; flex-wrap: nowrap; }
+#font-label { white-space: nowrap; display: inline-block; min-width: 4rem; text-align: center; }
+.font-ctrl .btn { width: 44px !important; height: 44px !important; border: 1px solid #ddd !important; background: #f8f8f8; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border-radius: 6px; color: #000; }
+
+/* SEÇÕES */
+.section-padding { padding: 4rem 0; }
+.section-gray { background: var(--bg-gray); }
+.section-light { background: var(--bg-light); }
+.section-centered { text-align: center; }
+.section-title { text-align: center; color: var(--primary-dark); margin-bottom: 1rem; text-transform: uppercase; font-weight: 800; max-width: 100%; overflow-wrap: break-word; hyphens: auto; font-size: 2.2rem; }
+.section-subtitle { text-align: center; margin-bottom: 3rem; color: var(--text-muted); }
+
+/* GRID */
+.grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.grid-mt { margin-top: 3rem; }
+
+/* CARDS */
+.card { background: #fff; border: 1px solid #d1d5db; border-radius: 12px; padding: 3rem 1.5rem 1.5rem; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: auto !important; }
+.card-number { position: absolute; top: 12px; right: 20px; font-size: 1.5rem; font-weight: 800; color: #000; }
+.card-number-big { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+.card-number-green { color: var(--text-dark); }
+.card h3 { font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.5rem; font-weight: 700; }
+.card-centered { text-align: center; }
+.card-highlight { max-width: 800px; margin: 0 auto; border: 3px solid var(--border-gold); }
+.card-border-red { border-left: 5px solid var(--emergency-red); }
+.card-border-blue { border-left: 5px solid var(--border-gold); }
+.card-title-red { color: var(--emergency-red); display: flex; align-items: center; gap: 10px; }
+.card-title-blue { color: var(--primary-dark); }
+.card-title-flex { display: flex; align-items: center; gap: 10px; }
+.card-description { margin: 1rem 0; color: var(--text-muted); }
+.card-contact { display: flex; align-items: center; gap: 6px; }
+.card-info-subtitle { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem; }
+.card-meta { font-size: 0.85rem; color: var(--text-muted); }
+.card-institution-name { font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark); }
+
+/* ÍCONES */
+.icon-sm { width: 14px; height: 14px; }
+.card-icon { width: 48px; height: 48px; margin: 0 auto 1rem; }
+.card-icon-md { width: 40px; height: 40px; margin-bottom: 1rem; }
+.icon-blue { color: var(--primary-dark); }
+.icon-green { color: var(--text-dark); }
+.icon-orange { color: var(--accent-gold); }
+.icon-external { width: 16px; height: 16px; margin-left: 4px; }
+
+/* BADGES */
+.badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-bottom: 0.8rem; border: 1px solid currentColor; width: fit-content; }
+.badge-red { background: #fee2e2; color: #991b1b; }
+.badge-purple { background: #f3e8ff; color: #6b21a8; }
+.badge-green { background: #dcfce7; color: #166534; }
+.badge-blue { background: #fffacd; color: var(--text-dark); border: 2px solid var(--border-gold); }
+.badge-orange { background: #fff4e6; color: #9a3412; }
+.badge-pink { background: #fce7f3; color: #9f1239; }
+.badge-bordered { border: 2px solid var(--border-gold); background: #fffacd; color: var(--text-dark); }
+
+/* ALERTAS */
+.alert-box { background: #fffef0; border-radius: 8px; padding: 1.5rem; display: flex; gap: 15px; border: 2px solid var(--border-gold); margin: 2rem 0; align-items: center; flex-wrap: wrap; }
+.alert-icon { color: var(--text-dark); width: 32px; height: 32px; flex-shrink: 0; }
+.alert-title { color: var(--text-dark); }
+.warning-box { background: #fffacd; border: 3px solid var(--border-gold); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem 0; color: var(--text-dark); font-weight: bold; width: 100%; }
+
+/* OMS */
+.oms-description { text-align: center; max-width: 950px; margin: 0 auto 3rem; color: var(--text-dark); }
+
+/* CITAÇÃO ESTATUTO */
+.estatuto-quote { margin-top: 3rem; font-style: italic; color: var(--text-muted); max-width: 850px; margin-inline: auto; text-align: center; }
+.estatuto-quote-author { margin-top: 10px; font-weight: bold; font-style: normal; background: none !important; padding: 0 !important; color: var(--text-dark); }
+
+/* BOTÕES */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: bold; text-decoration: none; border: none; gap: 8px; cursor: pointer; transition: all 0.3s ease; }
+.btn-emergency { background: var(--emergency-red); color: #ffffff; }
+.btn-emergency:hover { background: #991b1b; }
+.btn-primary { background: var(--primary-dark); color: #fff; width: 100%; }
+.btn-primary:hover { background: #000; }
+.btn-white { background: #fff; color: var(--text-dark); border: 2px solid var(--text-muted); width: 100%; }
+.btn-white:hover { background: var(--bg-light); }
+.btn-outline { border: 3px solid var(--border-gold); color: var(--text-dark); background: #fff; width: 100%; font-weight: 700; }
+.btn-outline:hover { background: #fffacd; }
+.btn-auto { width: auto; }
+.btn-padded { padding-inline: 4rem; }
+.btn-back { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--text-muted); }
+.btn-back:hover { color: var(--primary-dark); }
+
+/* MUNICÍPIOS */
+.municipios-box { margin-top: 3rem; text-align: center; background: var(--bg-light); padding: 2rem; border-radius: 12px; border: 2px solid var(--border-gold); }
+.municipios-title { color: var(--primary-dark); margin-bottom: 1.5rem; }
+.city-grid { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1rem; }
+.city-tag { background: #f7db08; color: #000; padding: 8px 25px; border-radius: 30px; font-weight: 800; font-size: 0.9rem; border: 2px solid var(--border-gold); }
+
+/* CONSULTA */
+.consulta-header { text-align: center; margin: 3rem 0; }
+.consulta-title { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 0.5rem; }
+.consulta-card { max-width: 600px; margin: 0 auto; }
+.consulta-card-header { display: flex; gap: 10px; align-items: center; margin-bottom: 1rem; }
+.consulta-hint { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+.consulta-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.consulta-input { flex: 1; min-width: 200px; padding: 12px; border: 2px solid var(--text-muted); border-radius: 6px; text-transform: uppercase; font-size: 1rem; color: var(--text-dark); }
+
+/* FOOTER */
+footer { 
+    background: linear-gradient(135deg, #f7db08 0%, #f7db08 50%, var(--primary-dark) 50%, var(--primary-dark) 100%);
+    padding: 4rem 0 2rem; 
+}
+
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 3rem; 
+    text-align: center; 
+}
+
+/* Cores padrão para o lado amarelo do footer */
+.footer-grid h3, .footer-grid h4, .footer-grid p { 
+    color: #000; 
+    font-weight: 800; 
+}
+
+/* CORREÇÃO DE CONTRASTE: Lado direito (Fundo Preto) */
+.footer-grid > div:last-child h3,
+.footer-grid > div:last-child h4,
+.footer-grid > div:last-child p,
+.footer-grid > div:last-child a {
+    color: #ffffff !important; /* Texto branco no fundo preto */
+}
+
+.footer-emergency-item { 
+    background: rgba(0,0,0,0.1); 
+    padding: 12px; 
+    border-radius: 4px; 
+    margin-bottom: 8px; 
+}
+
+/* Ajuste específico para os links de emergência no fundo preto */
+.footer-grid > div:last-child .footer-emergency-item {
+    background: rgba(255,255,255,0.1);
+}
+
+.footer-emergency-item a { 
+    text-decoration: underline; 
+    display: block; 
+    font-weight: 700; 
+}
+
+/* RODAPÉ FINAL (Copyright e Data) - Texto que cruza as duas cores */
+.footer-bottom { 
+    border-top: 1px solid rgba(0,0,0,0.1); 
+    margin-top: 3rem; 
+    padding-top: 2rem; 
+    text-align: center; 
+    font-size: 0.85rem; 
+}
+
+.footer-bottom p { 
+    color: #000 !important; /* Mantém a cor da paleta */
+    font-weight: 600;
+    /* EFEITO HALO: Contorno branco sutil para que o preto seja legível sobre o fundo preto */
+    text-shadow: 
+        1px 1px 0 #fff,
+       -1px -1px 0 #fff,  
+        1px -1px 0 #fff,
+       -1px  1px 0 #fff;
+}
+
+footer a { 
+    text-decoration: underline; 
+    font-weight: 600; 
+}
+
+/* TEXTO E LISTAS */
+p, span, li, b { overflow-wrap: anywhere; hyphens: auto; }
+.card ul { list-style: none; margin-top: 1rem; }
+.card li { margin-bottom: 1rem; display: flex; gap: 10px; align-items: flex-start; }
+.card li i, .card li svg { flex-shrink: 0; margin-top: 4px; color: var(--primary-dark); }
+.card p { color: var(--text-muted); }
+
+.text-yellow-contrast { color: var(--text-dark) !important; font-weight: 800; }
+
+/* RESPONSIVO */
+@media (min-width: 900px) {
+    .header-row { flex-direction: row; text-align: left; justify-content: space-between; align-items: center; }
+    .header-left { justify-content: flex-start; }
+    .header-title { text-align: left; } /* Garante alinhamento à esquerda no desktop */
+    .logo-policia { margin: 0; }
+    .btn { width: auto; }
+    .btn-primary { width: auto; }
+    .btn-white { width: auto; }
+    .btn-outline { width: auto; }
+    .font-ctrl { flex-direction: row; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: repeat(3, 1fr); text-align: left; }
+}

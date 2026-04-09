@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delegacia Especializada de Proteção à Pessoa Idosa (DEPPI/ES). Informações sobre tipos de violência, estatuto do idoso, canais de denúncia e onde buscar ajuda no Espírito Santo.">
+    <title>DEPPI - Proteção à Pessoa Idosa | Delegacia Especializada ES</title>
+    <meta name="author" content="DEPPI - Delegacia Especializada de Proteção à Pessoa Idosa" />
+    <meta name="keywords" content="pessoa idosa, violência, denúncia, DEPPI, Espírito Santo, proteção, estatuto do idoso">
+    <meta property="og:title" content="DEPPI - Proteção à Pessoa Idosa | Delegacia Especializada ES" />
+    <meta property="og:description" content="Saiba onde buscar ajuda contra violência à pessoa idosa. DEPPI - Delegacia Especializada de Proteção à Pessoa Idosa do Espírito Santo." />
+    <meta property="og:type" content="website"/>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-row">
+                <div class="header-left">
+                    <picture>
+                        <source srcset="assets/logo-policia-civil-es.webp" type="image/webp">
+                            <img
+                                src="assets/logo-policia-civil-es.png"
+                                alt="Brasão Polícia Civil ES"
+                                class="logo-policia"
+                                width="85"
+                                height="112"
+                                loading="eager"
+                                decoding="async"
+                            >
+                    </picture>
+                    <div class="header-title">
+                        <h1>DEPPI - Delegacia Especializada de Proteção à Pessoa Idosa</h1>
+                        <p class="header-subtitle">Espírito Santo - Proteção e Cuidado com Quem Mais Precisa</p>
+                    </div>
+                </div>
+                <nav aria-label="Canais de emergência">
+                    <ul class="header-nav-list">
+                        <li><a href="tel:190" class="btn btn-emergency"><i data-lucide="phone" aria-hidden="true"></i> EMERGÊNCIA 190</a></li>
+                        <li><a href="tel:100" class="btn btn-white"><i data-lucide="alert-triangle" aria-hidden="true"></i> DISQUE 100</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="font-ctrl-row">
+                <div class="font-ctrl" role="region" aria-label="Acessibilidade">
+                    <span>Tamanho da fonte:</span>
+                    <div class="font-ctrl-group">
+                        <button onclick="changeFont(-10)" class="btn" aria-label="Diminuir fonte">-</button>
+                        <b id="font-label">100%</b>
+                        <button onclick="changeFont(10)" class="btn" aria-label="Aumentar fonte">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- BUSCAR AJUDA -->
+        <section class="section-padding section-gray">
+    <div class="container">
+        <h2 class="section-title">SAIBA ONDE BUSCAR AJUDA</h2>
+        <p class="section-subtitle">Violência contra a pessoa idosa é crime. Denuncie e proteja quem você ama.</p>
+        <div class="grid grid-3">
+            <div class="card card-border-red">
+                <h3 class="card-title-red"><i data-lucide="phone" aria-hidden="true"></i> EMERGÊNCIA 190</h3>
+                <p>Em caso de urgência e emergência</p>
+                <a href="tel:190" class="btn btn-emergency">LIGAR AGORA</a>
+            </div>
+            <div class="card card-border-blue">
+                <h3><i data-lucide="phone" aria-hidden="true"></i> DISQUE 100</h3>
+                <p>Disque Direitos Humanos - Denúncias</p>
+                <a href="tel:100" class="btn btn-primary">LIGAR AGORA</a>
+            </div>
+            <div class="card card-border-blue">
+                <h3><i data-lucide="phone" aria-hidden="true"></i> DISQUE 181</h3>
+                <p>Disque Direitos Humanos ES</p>
+                <a href="tel:181" class="btn btn-primary">LIGAR AGORA</a>
+            </div>
+        </div>
+        <div class="grid grid-2 grid-mt">
+            <div class="card">
+                <h3><i data-lucide="globe" aria-hidden="true"></i> Delegacia Online</h3>
+                <p>Sistema Digital do Registro de Ocorrências</p>
+                <a href="https://delegaciaonline.sesp.es.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    ACESSAR DELEGACIA ONLINE
+                    <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="card">
+                <h3><i data-lucide="map-pin" aria-hidden="true"></i> DEPPI - Localização</h3>
+                <p>Av. Nossa Senhora da Penha, n.º 2290. Bairro Santa Luiza, Vitória/ES. CEP 29045-402</p>
+                <p class="card-contact"><i data-lucide="phone" class="icon-sm" aria-hidden="true"></i> <strong>(27) 3198-5950</strong> | Seg a Sex: 8h às 18h</p>
+            </div>
+        </div>
+    </div>
+        </section>
+        <!-- TIPOS DE VIOLÊNCIA -->
+        <section class="container section-padding">
+            <h2 class="section-title">TIPOS DE VIOLÊNCIA CONTRA A PESSOA IDOSA</h2>
+            <p class="oms-description">A violência contra a pessoa idosa pode ser definida como "um ato único, repetido ou a falta de ação apropriada, ocorrendo em qualquer relacionamento em que exista uma expectativa de confiança que cause dano ou sofrimento a uma pessoa idosa" - Organização Mundial da Saúde (OMS).</p>
+            <div class="grid grid-3">
+                <div class="card"><span class="card-number" aria-hidden="true">1</span><span class="badge badge-red">Física</span><h3>Violência Física</h3><p>Uso da força física para compelir os idosos a fazerem o que não desejam, para feri-los, provocar dor, incapacidade ou morte.</p></div>
+                <div class="card"><span class="card-number" aria-hidden="true">2</span><span class="badge badge-purple">Psicológica</span><h3>Violência Psicológica</h3><p>Corresponde a agressões verbais ou gestuais com o objetivo de aterrorizar, humilhar, restringir a liberdade ou isolar do convívio social.</p></div>
+                <div class="card"><span class="card-number" aria-hidden="true">3</span><span class="badge badge-green">Patrimonial</span><h3>Violência Patrimonial</h3><p>Consiste na exploração imprópria ou ilegal dos idosos ou ao uso não consentido por eles de seus recursos financeiros e patrimoniais.</p></div>
+                <div class="card"><span class="card-number" aria-hidden="true">4</span><span class="badge badge-pink">Sexual</span><h3>Violência Sexual</h3><p>Refere-se ao ato ou jogo sexual de caráter homo ou hetero-relacional, utilizando pessoas idosas.</p></div>
+                <div class="card"><span class="card-number" aria-hidden="true">5</span><span class="badge badge-orange">Negligência</span><h3>Negligência</h3><p>Caracteriza-se pela recusa ou omissão de cuidados devidos e necessários aos idosos, por parte dos responsáveis familiares ou institucionais.</p></div>
+                <div class="card"><span class="card-number" aria-hidden="true">6</span><span class="badge badge-blue">Abandono</span><h3>Abandono</h3><p>É uma forma de violência que se manifesta pela ausência ou deserção dos responsáveis governamentais, institucionais ou familiares de prestarem socorro a uma pessoa idosa.</p></div>
+            </div>
+            <div class="alert-box">
+                <i data-lucide="alert-triangle" class="alert-icon" aria-hidden="true"></i>
+                <p><b class="alert-title">Importante Saber:</b> Qualquer pessoa pode denunciar violência contra a pessoa idosa. A denúncia pode ser anônima e é um direito e dever de todos os cidadãos.</p>
+            </div>
+        </section>
+
+        <!-- ESTATUTO -->
+        <section class="section-padding section-light">
+            <div class="container section-centered">
+                <h2 class="section-title">ESTATUTO DA PESSOA IDOSA</h2>
+                <span class="badge badge-blue badge-bordered">Lei Federal nº 10.741/2003</span>
+                <div class="grid grid-3 grid-mt">
+                    <div class="card card-centered">
+                        <i data-lucide="scale" class="card-icon icon-blue" aria-hidden="true"></i>
+                        <h3>O que é?</h3>
+                        <p>Lei que regula direitos e garantias das pessoas idosas, efetivando direitos à vida, saúde, alimentação, educação, cultura, esporte, lazer, trabalho, cidadania, liberdade, dignidade, respeito e convivência familiar e comunitária.</p>
+                    </div>
+                    <div class="card card-centered">
+                        <i data-lucide="calendar" class="card-icon icon-green" aria-hidden="true"></i>
+                        <h3>Quem é Idoso?</h3>
+                        <p class="card-number-big card-number-green">60+</p>
+                        <p>Pessoas com idade igual ou superior a 60 (sessenta) anos são consideradas idosas para o Estatuto.</p>
+                    </div>
+                    <div class="card card-centered">
+                        <i data-lucide="file-text" class="card-icon icon-orange" aria-hidden="true"></i>
+                        <h3>Data Importante</h3>
+                        <p class="text-yellow-contrast">15 DE JUNHO</p>
+                        <p>Dia Mundial de Conscientização da Violência Contra a Pessoa Idosa</p>
+                    </div>
+                </div>
+                <blockquote class="estatuto-quote">
+                    "É assegurada a atenção integral à saúde da pessoa idosa, por intermédio do Sistema Único de Saúde – SUS, garantindo-lhe o acesso universal e igualitário."
+                    <footer class="estatuto-quote-author">— Art. 15º do Estatuto da Pessoa Idosa</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- INSTITUIÇÕES -->
+        <section class="container section-padding">
+            <h2 class="section-title">INSTITUIÇÕES PARCEIRAS</h2>
+            <p class="section-subtitle">Rede de proteção e apoio à pessoa idosa no Espírito Santo</p>
+            <div class="grid grid-3">
+                <article class="card">
+                    <span class="card-number" aria-hidden="true">1</span>
+                    <span class="badge badge-blue">DEPPI</span>
+                    <div class="card-centered">
+                        <i data-lucide="shield" class="card-icon-md" aria-hidden="true"></i>
+                        <h3>DEPPI</h3>
+                        <h4 class="card-institution-name">Delegacia Especializada de Proteção à Pessoa Idosa</h4>
+                        <p class="card-meta">Superintendência de Polícia Especializada</p>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <span class="card-number" aria-hidden="true">2</span>
+                    <span class="badge badge-green">MPES</span>
+                    <div class="card-centered">
+                        <i data-lucide="scale" class="card-icon-md" aria-hidden="true"></i>
+                        <h3>MPES</h3>
+                        <h4 class="card-institution-name">Ministério Público Estadual</h4>
+                        <p class="card-meta">Órgão de defesa dos direitos sociais e individuais</p>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <span class="card-number" aria-hidden="true">3</span>
+                    <span class="badge badge-purple">CEDDPI</span>
+                    <div class="card-centered">
+                        <i data-lucide="users" class="card-icon-md" aria-hidden="true"></i>
+                        <h3>CEDDPI</h3>
+                        <h4 class="card-institution-name">Conselho Estadual de Defesa dos Direitos da Pessoa Idosa</h4>
+                        <p class="card-meta">Conselho de defesa e proteção</p>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <span class="card-number" aria-hidden="true">4</span>
+                    <span class="badge badge-orange">DPES</span>
+                    <div class="card-centered">
+                        <i data-lucide="building" class="card-icon-md" aria-hidden="true"></i>
+                        <h3>DPES</h3>
+                        <h4 class="card-institution-name">Defensoria Pública Estadual</h4>
+                        <p class="card-meta">Assistência jurídica gratuita</p>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <span class="card-number" aria-hidden="true">5</span>
+                    <span class="badge badge-red">CREAS</span>
+                    <div class="card-centered">
+                        <i data-lucide="heart" class="card-icon-md" aria-hidden="true"></i>
+                        <h3>CREAS</h3>
+                        <h4 class="card-institution-name">Centro de Referência Especializado de Assistência Social</h4>
+                        <p class="card-meta">Atendimento especializado em assistência social</p>
+                    </div>
+                </article>
+            </div>
+            <div class="municipios-box">
+                <h3 class="municipios-title">MUNICÍPIOS ATENDIDOS PELA DEPPI</h3>
+                <ul class="city-grid" aria-label="Lista de municípios atendidos">
+                    <li class="city-tag">Vitória</li>
+                    <li class="city-tag">Vila Velha</li>
+                    <li class="city-tag">Serra</li>
+                    <li class="city-tag">Cariacica</li>
+                    <li class="city-tag">Viana</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- COMO DENUNCIAR -->
+        <section class="section-padding section-gray">
+            <div class="container">
+                <h2 class="section-title">COMO FAZER A DENÚNCIA</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3><i data-lucide="building-2" aria-hidden="true"></i> Onde Registrar</h3>
+                        <ul>
+                            <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Na DEPPI - Delegacia Especializada de Proteção à Pessoa Idosa</li>
+                            <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Em qualquer Delegacia da Polícia Civil mais próxima</li>
+                            <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Online: delegaciaonline.sesp.es.gov.br</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3><i data-lucide="file-check-2" aria-hidden="true"></i> Informações Importantes</h3>
+                        <p class="card-info-subtitle">Sempre que possível, leve o máximo de informações para agilizar o processo:</p>
+                        <ul>
+                            <li><i data-lucide="user" aria-hidden="true"></i> <span><b>Documentos Pessoais:</b> RG, CPF do idoso e do denunciante</span></li>
+                            <li><i data-lucide="phone" aria-hidden="true"></i> <span><b>Dados do Suspeito:</b> Nome, endereço, telefone ou identificação</span></li>
+                            <li><i data-lucide="users" aria-hidden="true"></i> <span><b>Testemunhas:</b> Contato de pessoas que presenciaram a violência</span></li>
+                            <li><i data-lucide="stethoscope" aria-hidden="true"></i> <span><b>Laudos Médicos:</b> Atestados ou hospitalares após agressões</span></li>
+                            <li><i data-lucide="file-check" aria-hidden="true"></i> <span><b>Outras Provas:</b> Qualquer evidência adicional que comprove</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="warning-box">
+                    LEMBRE-SE: TODA DENÚNCIA É IMPORTANTE E PODE SALVAR UMA VIDA. NÃO HESITE EM BUSCAR AJUDA PROFISSIONAL.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-grid">
+            <div>
+                <h3>DEPPI</h3>
+                <p class="footer-description">Delegacia Especializada de Proteção à Pessoa Idosa do Espírito Santo. Trabalhamos pela proteção e dignidade dos nossos idosos.</p>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p><i data-lucide="phone" class="icon-sm" aria-hidden="true"></i> (27) 3198-5950</p>
+                <p><i data-lucide="mail" class="icon-sm" aria-hidden="true"></i> depi@pc.es.gov.br</p>
+                <p><i data-lucide="map-pin" class="icon-sm" aria-hidden="true"></i> Vitória/ES</p>
+            </div>
+            <div>
+                <h3>Emergências</h3>
+                <div class="footer-emergency-item"><a href="tel:190">190 - EMERGÊNCIA</a></div>
+                <div class="footer-emergency-item"><a href="tel:100">100 - DISQUE DIREITOS HUMANOS</a></div>
+                <div class="footer-emergency-item"><a href="tel:181">181 - DISQUE DIREITOS HUMANOS ES</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>📅 15 DE JUNHO - DIA MUNDIAL DE CONSCIENTIZAÇÃO DA VIOLÊNCIA CONTRA A PESSOA IDOSA</p>
+            <p class="footer-copy">© 2024 Delegacia Especializada de Proteção à Pessoa Idosa - DEPPI - Polícia Civil do Espírito Santo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+        let currentScale = 100;
+        function changeFont(delta) {
+            currentScale = Math.min(Math.max(currentScale + delta, 80), 200);
+            document.documentElement.style.setProperty('--font-scale', currentScale / 100);
+            document.getElementById('font-label').innerText = currentScale + '%';
+        }
+    </script>
+</body>
+</html>
