@@ -1,8 +1,10 @@
 :root {
     --primary-dark: #12110f; /* Preto */
-    --accent-gold: #c9a403; /* Dourado mais escuro para contraste */
+    --primary-yellow: #F7DB08; /* Amarelo da paleta */
+    --dark-grey: #434344; /* Cinza-escuro da paleta */
+    --beige-grey: #9d988d; /* Cinza-bege */
+    --moss-green: #5f5c49; /* Verde-musgo */
     --emergency-red: #b91c1c; /* Vermelho mais escuro */
-    --bg-gray: #d4d0c8; /* Cinza mais claro */
     --bg-light: #f5f5dc; /* Bege bem claro */
     --text-dark: #12110f; /* Preto para texto */
     --text-muted: #3a3a3a; /* Cinza escuro com bom contraste */
@@ -33,10 +35,10 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--text-dark); bac
     border: 0;
 }
 
-/* HEADER */
+/* 1) HEADER e 5) LINKS DE EMERGÊNCIA (Correção: Fundo #12110f e Texto #F7DB08) */
 header { 
-    background: linear-gradient(135deg, #f7db08 0%, #f7db08 50%, var(--primary-dark) 50%, var(--primary-dark) 100%);
-    color: #000; 
+    background: var(--primary-dark) !important; /* Substituído gradiente por preto sólido */
+    color: var(--primary-yellow); 
     padding: 2rem 0; 
     width: 100%; 
     height: auto !important; 
@@ -44,11 +46,15 @@ header {
 .header-row { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
 .header-left { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
 .header-title { text-align: center; max-width: 550px; }
-.header-subtitle { opacity: 1; color: #000; }
+.header-subtitle { opacity: 1; color: #ffffff; } /* Texto secundário em branco sobre preto */
 .logo-policia { display: block; margin: 0 auto 1rem; width: 85px; height: auto; }
-header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens: none !important; color: #000; }
+header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens: none !important; color: var(--primary-yellow); }
 
 .header-nav-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+/* Ajuste nos botões do header para garantir contraste */
+.header-nav-list .btn-white { background: #fff; color: #000; border: none; }
+.header-nav-list .btn-emergency { background: var(--emergency-red); color: #fff; }
 
 .font-ctrl-row { display: flex; justify-content: center; margin-top: 1.5rem; width: 100%; }
 .font-ctrl { background: #fff; color: #000; padding: 10px 15px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
@@ -58,7 +64,7 @@ header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens:
 
 /* SEÇÕES */
 .section-padding { padding: 4rem 0; }
-.section-gray { background: var(--bg-gray); }
+.section-gray { background: var(--beige-grey); } /* Uso do cinza-bege solicitado */
 .section-light { background: var(--bg-light); }
 .section-centered { text-align: center; }
 .section-title { text-align: center; color: var(--primary-dark); margin-bottom: 1rem; text-transform: uppercase; font-weight: 800; max-width: 100%; overflow-wrap: break-word; hyphens: auto; font-size: 2.2rem; }
@@ -70,7 +76,18 @@ header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens:
 
 /* CARDS */
 .card { background: #fff; border: 1px solid #d1d5db; border-radius: 12px; padding: 3rem 1.5rem 1.5rem; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; flex-direction: column; height: auto !important; }
-.card-number { position: absolute; top: 12px; right: 20px; font-size: 1.5rem; font-weight: 800; color: #000; }
+
+/* 3) NUMERAIS INDICADORES (Correção: Amarelo #F7DB08 sobre Cinza-Escuro #434344) */
+.card-number { 
+    position: absolute; top: 12px; right: 20px; 
+    font-size: 1.2rem; font-weight: 800; 
+    color: var(--primary-yellow); 
+    background-color: var(--dark-grey); 
+    width: 35px; height: 35px; 
+    border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; 
+}
+
 .card-number-big { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
 .card-number-green { color: var(--text-dark); }
 .card h3 { font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.5rem; font-weight: 700; }
@@ -119,12 +136,19 @@ header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens:
 .estatuto-quote { margin-top: 3rem; font-style: italic; color: var(--text-muted); max-width: 850px; margin-inline: auto; text-align: center; }
 .estatuto-quote-author { margin-top: 10px; font-weight: bold; font-style: normal; background: none !important; padding: 0 !important; color: var(--text-dark); }
 
-/* BOTÕES */
+/* BOTÕES GERAIS */
 .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: bold; text-decoration: none; border: none; gap: 8px; cursor: pointer; transition: all 0.3s ease; }
-.btn-emergency { background: var(--emergency-red); color: #ffffff; }
-.btn-emergency:hover { background: #991b1b; }
-.btn-primary { background: var(--primary-dark); color: #fff; width: 100%; }
-.btn-primary:hover { background: #000; }
+
+/* 2) BOTÕES "LIGAR AGORA" nos cards (Correção: Amarelo #F7DB08 sobre Preto #12110f) */
+.grid .btn-primary, .grid .btn-emergency { 
+    background-color: var(--primary-dark) !important; 
+    color: var(--primary-yellow) !important; 
+    border: 1px solid var(--primary-yellow) !important;
+}
+
+.btn-emergency:hover { filter: brightness(1.2); }
+.btn-primary:hover { filter: brightness(1.2); }
+
 .btn-white { background: #fff; color: var(--text-dark); border: 2px solid var(--text-muted); width: 100%; }
 .btn-white:hover { background: var(--bg-light); }
 .btn-outline { border: 3px solid var(--border-gold); color: var(--text-dark); background: #fff; width: 100%; font-weight: 700; }
@@ -149,9 +173,10 @@ header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens:
 .consulta-form { display: flex; gap: 10px; flex-wrap: wrap; }
 .consulta-input { flex: 1; min-width: 200px; padding: 12px; border: 2px solid var(--text-muted); border-radius: 6px; text-transform: uppercase; font-size: 1rem; color: var(--text-dark); }
 
-/* FOOTER */
+/* 4) RODAPÉ (Correção: Fundo #434344 e Texto Branco #ffffff / Amarelo #F7DB08) */
 footer { 
-    background: linear-gradient(135deg, #f7db08 0%, #f7db08 50%, var(--primary-dark) 50%, var(--primary-dark) 100%);
+    background: var(--dark-grey) !important; /* Substituído gradiente por cinza-escuro sólido */
+    color: #ffffff; 
     padding: 4rem 0 2rem; 
 }
 
@@ -162,30 +187,30 @@ footer {
     text-align: center; 
 }
 
-/* Cores padrão para o lado amarelo do footer */
-.footer-grid h3, .footer-grid h4, .footer-grid p { 
-    color: #000; 
+/* Títulos em amarelo para contraste */
+.footer-grid h3, .footer-grid h4 { 
+    color: var(--primary-yellow); 
     font-weight: 800; 
 }
 
-/* CORREÇÃO DE CONTRASTE: Lado direito (Fundo Preto) */
+/* Texto secundário em branco */
+.footer-grid p, .footer-description { 
+    color: #ffffff !important; 
+}
+
+/* CORREÇÃO DE CONTRASTE: Lado direito */
 .footer-grid > div:last-child h3,
 .footer-grid > div:last-child h4,
 .footer-grid > div:last-child p,
 .footer-grid > div:last-child a {
-    color: #ffffff !important; /* Texto branco no fundo preto */
+    color: var(--primary-yellow) !important;
 }
 
 .footer-emergency-item { 
-    background: rgba(0,0,0,0.1); 
+    background: rgba(255,255,255,0.1); 
     padding: 12px; 
     border-radius: 4px; 
     margin-bottom: 8px; 
-}
-
-/* Ajuste específico para os links de emergência no fundo preto */
-.footer-grid > div:last-child .footer-emergency-item {
-    background: rgba(255,255,255,0.1);
 }
 
 .footer-emergency-item a { 
@@ -194,9 +219,9 @@ footer {
     font-weight: 700; 
 }
 
-/* RODAPÉ FINAL (Copyright e Data) - Texto que cruza as duas cores */
+/* RODAPÉ FINAL */
 .footer-bottom { 
-    border-top: 1px solid rgba(0,0,0,0.1); 
+    border-top: 1px solid rgba(255,255,255,0.2); 
     margin-top: 3rem; 
     padding-top: 2rem; 
     text-align: center; 
@@ -204,17 +229,12 @@ footer {
 }
 
 .footer-bottom p { 
-    color: #000 !important; /* Mantém a cor da paleta */
+    color: #ffffff !important; 
     font-weight: 600;
-    /* EFEITO HALO: Contorno branco sutil para que o preto seja legível sobre o fundo preto */
-    text-shadow: 
-        1px 1px 0 #fff,
-       -1px -1px 0 #fff,  
-        1px -1px 0 #fff,
-       -1px  1px 0 #fff;
 }
 
 footer a { 
+    color: var(--primary-yellow);
     text-decoration: underline; 
     font-weight: 600; 
 }
@@ -232,7 +252,7 @@ p, span, li, b { overflow-wrap: anywhere; hyphens: auto; }
 @media (min-width: 900px) {
     .header-row { flex-direction: row; text-align: left; justify-content: space-between; align-items: center; }
     .header-left { justify-content: flex-start; }
-    .header-title { text-align: left; } /* Garante alinhamento à esquerda no desktop */
+    .header-title { text-align: left; }
     .logo-policia { margin: 0; }
     .btn { width: auto; }
     .btn-primary { width: auto; }
