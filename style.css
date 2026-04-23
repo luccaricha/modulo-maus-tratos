@@ -68,7 +68,8 @@ header h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.5rem; hyphens:
 .section-light { background: var(--bg-light); }
 .section-centered { text-align: center; }
 .section-title { text-align: center; color: var(--primary-dark); margin-bottom: 1rem; text-transform: uppercase; font-weight: 800; max-width: 100%; overflow-wrap: break-word; hyphens: auto; font-size: 2.2rem; }
-.section-subtitle { text-align: center; margin-bottom: 3rem; color: var(--text-muted); }
+.section-subtitle { text-align: center; margin-bottom: 3rem; color: var(--primary-dark) !important; font-weight: 600; opacity: 0.9;
+}
 
 /* GRID */
 .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
